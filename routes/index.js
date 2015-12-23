@@ -1,9 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-var obj = {
-  color: "blue"
-};
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -11,23 +8,23 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/apartment', function(req, res, next) {
+/*router.get('/apartment', function(req, res, next) {
   res.render('pages/apartment', { object: obj });
-});
+});*/
 
 /* GET home page. */
-router.get('/catalogue', function(req, res, next) {
+/*router.get('/catalogue', function(req, res, next) {
   res.render('pages/catalogue', { title: 'Catalogue' });
-});
+});*/
 
 /* GET home page. */
-router.get('/contacts', function(req, res, next) {
+/*router.get('/contacts', function(req, res, next) {
   res.render('pages/contacts', { title: 'Contacts' });
-});
+});*/
 
 /* GET home page. */
-router.get('/send_request', function(req, res, next) {
+/*router.get('/send_request', function(req, res, next) {
   res.render('pages/send_request', { title: 'Send Request' });
-});
+});*/
 
 module.exports = router;

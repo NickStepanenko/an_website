@@ -1,18 +1,406 @@
 extends layout
 
 block content
-    #body
-        #preloader
-            .loder-box
-                .battery
-
-        #navigation.navbar-inverse.navbar-fixed-top.animated-header
+    // preloader
+    #preloader
+        .loder-box
+            .battery
+    // end preloader
+    //
+      Fixed Navigation
+      ====================================
+    header#navigation.navbar-inverse.navbar-fixed-top.animated-header
+        .container
+            .navbar-header
+                // responsive nav button
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                // /responsive nav button
+                // logo
+                h1.navbar-brand
+                    a(href='#body') Blue
+                // /logo
+            // main nav
+            nav.collapse.navbar-collapse.navbar-right(role='navigation')
+                ul#nav.nav.navbar-nav
+                    li
+                        a(href='#body') Home
+                    li
+                        a(href='#service') Service
+                    li
+                        a(href='#portfolio') portfolio
+                    li
+                        a(href='#testimonials') Testimonial
+                    li
+                        a(href='#price') price
+                    li
+                        a(href='#contact') Contact
+            // /main nav
+    //
+      End Fixed Navigation
+      ====================================
+    main.site-content(role='main')
+        //
+          Home Slider
+          ====================================
+        section#home-slider
+            #slider.sl-slider-wrapper
+                .sl-slider
+                    .sl-slide(data-orientation='horizontal', data-slice1-rotation='-25', data-slice2-rotation='-25', data-slice1-scale='2', data-slice2-scale='2')
+                        .bg-img.bg-img-1
+                        .slide-caption
+                            .caption-content
+                                h2.animated.fadeInDown BLUE Onepage HTML5 Template
+                                span.animated.fadeInDown Clean and Professional one page Template
+                                a.btn.btn-blue.btn-effect(href='#') Join US
+                    .sl-slide(data-orientation='vertical', data-slice1-rotation='10', data-slice2-rotation='-15', data-slice1-scale='1.5', data-slice2-scale='1.5')
+                        .bg-img.bg-img-2
+                        .slide-caption
+                            .caption-content
+                                h2 BLUE Onepage HTML5 Template
+                                span Clean and Professional one page Template
+                                a.btn.btn-blue.btn-effect(href='#') Join US
+                    .sl-slide(data-orientation='horizontal', data-slice1-rotation='3', data-slice2-rotation='3', data-slice1-scale='2', data-slice2-scale='1')
+                        .bg-img.bg-img-3
+                        .slide-caption
+                            .caption-content
+                                h2 BLUE Onepage HTML5 Template
+                                span Clean and Professional one page Template
+                                a.btn.btn-blue.btn-effect(href='#') Join US
+                // /sl-slider
+                //
+                  <nav id="nav-arrows" class="nav-arrows">
+                  <span class="nav-arrow-prev">Previous</span>
+                  <span class="nav-arrow-next">Next</span>
+                  </nav>
+                nav#nav-arrows.nav-arrows.hidden-xs.hidden-sm.visible-md.visible-lg
+                    a.sl-prev(href='javascript:;')
+                        i.fa.fa-angle-left.fa-3x
+                    a.sl-next(href='javascript:;')
+                        i.fa.fa-angle-right.fa-3x
+                nav#nav-dots.nav-dots.visible-xs.visible-sm.hidden-md.hidden-lg
+                    span.nav-dot-current
+                    span
+                    span
+            // /slider-wrapper
+        //
+          End Home SliderEnd
+          ====================================
+        // about section
+        section#about
             .container
-                .navbar-header
-                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-                        span.sr-only "Toggle navigation"
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-
-                    h1.navbar-brand
+                .row
+                    .col-md-4.wow.animated.fadeInLeft
+                        .recent-works
+                            h3 Recent Works
+                            #works
+                                .work-item
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        br
+                                        br
+                                        |  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                .work-item
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        br
+                                        br
+                                        |  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                                .work-item
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        br
+                                        br
+                                        |  There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                    .col-md-7.col-md-offset-1.wow.animated.fadeInRight
+                        .welcome-block
+                            h3 Welcome To Our Site
+                            .message-body
+                                img.pull-left(src='img/member-1.jpg', alt='member')
+                                p
+                                    | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            a.btn.btn-border.btn-effect.pull-right(href='#') Read More
+        // end about section
+        // Service section
+        section#service
+            .container
+                .row
+                    .sec-title.text-center
+                        h2.wow.animated.bounceInLeft Service
+                        p.wow.animated.bounceInRight The Key Features of our Job
+                    .col-md-3.col-sm-6.col-xs-12.text-center.wow.animated.zoomIn
+                        .service-item
+                            .service-icon
+                                i.fa.fa-home.fa-3x
+                            h3 Support
+                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    .col-md-3.col-sm-6.col-xs-12.text-center.wow.animated.zoomIn(data-wow-delay='0.3s')
+                        .service-item
+                            .service-icon
+                                i.fa.fa-tasks.fa-3x
+                            h3 Well Documented
+                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    .col-md-3.col-sm-6.col-xs-12.text-center.wow.animated.zoomIn(data-wow-delay='0.6s')
+                        .service-item
+                            .service-icon
+                                i.fa.fa-clock-o.fa-3x
+                            h3 Design UI/UX
+                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    .col-md-3.col-sm-6.col-xs-12.text-center.wow.animated.zoomIn(data-wow-delay='0.9s')
+                        .service-item
+                            .service-icon
+                                i.fa.fa-heart.fa-3x
+                            h3 Web Security
+                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        // end Service section
+        // portfolio section
+        section#portfolio
+            .container
+                .row
+                    .sec-title.text-center.wow.animated.fadeInDown
+                        h2 FEATURED PROJECTS
+                        p
+                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    ul.project-wrapper.wow.animated.fadeInUp
+                        li.portfolio-item
+                            img.img-responsive(src='img/portfolio/item.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat')
+                            figcaption.mask
+                                h3 Wall street
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                            ul.external
+                                li
+                                    a.fancybox(title='Araund The world', data-fancybox-group='works', href='img/portfolio/item.jpg')
+                                        i.fa.fa-search
+                                li
+                                    a(href='')
+                                        i.fa.fa-link
+                        li.portfolio-item
+                            img.img-responsive(src='img/portfolio/item2.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                            figcaption.mask
+                                h3 Wall street
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                            ul.external
+                                li
+                                    a.fancybox(title='Wall street', href='img/slider/banner.jpg', data-fancybox-group='works')
+                                        i.fa.fa-search
+                                li
+                                    a(href='')
+                                        i.fa.fa-link
+                        li.portfolio-item
+                            img.img-responsive(src='img/portfolio/item3.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                            figcaption.mask
+                                h3 Wall street
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                            ul.external
+                                li
+                                    a.fancybox(title='Behind The world', data-fancybox-group='works', href='img/portfolio/item3.jpg')
+                                        i.fa.fa-search
+                                li
+                                    a(href='')
+                                        i.fa.fa-link
+                        li.portfolio-item
+                            img.img-responsive(src='img/portfolio/item4.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.')
+                            figcaption.mask
+                                h3 Wall street
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                            ul.external
+                                li
+                                    a.fancybox(title='Wall street 4', data-fancybox-group='works', href='img/portfolio/item4.jpg')
+                                        i.fa.fa-search
+                                li
+                                    a(href='')
+                                        i.fa.fa-link
+                        li.portfolio-item
+                            img.img-responsive(src='img/portfolio/item5.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                            figcaption.mask
+                                h3 Wall street
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                            ul.external
+                                li
+                                    a.fancybox(title='Wall street 5', data-fancybox-group='works', href='img/portfolio/item5.jpg')
+                                        i.fa.fa-search
+                                li
+                                    a(href='')
+                                        i.fa.fa-link
+                        li.portfolio-item
+                            img.img-responsive(src='img/portfolio/item6.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                            figcaption.mask
+                                h3 Wall street
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                            ul.external
+                                li
+                                    a.fancybox(title='Wall street 6', data-fancybox-group='works', href='img/portfolio/item6.jpg')
+                                        i.fa.fa-search
+                                li
+                                    a(href='')
+                                        i.fa.fa-link
+        // end portfolio section
+        // Testimonial section
+        section#testimonials.parallax
+            .overlay
+                .container
+                    .row
+                        .sec-title.text-center.white.wow.animated.fadeInDown
+                            h2 What people say
+                        #testimonial.wow.animated.fadeInUp
+                            .testimonial-item.text-center
+                                img(src='img/member-1.jpg', alt='Our Clients')
+                                .clearfix
+                                    span Katty Flower
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            .testimonial-item.text-center
+                                img(src='img/member-1.jpg', alt='Our Clients')
+                                .clearfix
+                                    span Katty Flower
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            .testimonial-item.text-center
+                                img(src='img/member-1.jpg', alt='Our Clients')
+                                .clearfix
+                                    span Katty Flower
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        // end Testimonial section
+        // Price section
+        section#price
+            .container
+                .row
+                    .sec-title.text-center.wow.animated.fadeInDown
+                        h2 Price
+                        p Our price for your company
+                    .col-md-4.wow.animated.fadeInUp
+                        .price-table.text-center
+                            span Silver
+                            .value
+                                span $
+                                span 24,35
+                                br
+                                span month
+                            ul
+                                li No Bonus Points
+                                li No Bonus Points
+                                li No Bonus Points
+                                li No Bonus Points
+                                li
+                                    a(href='#') sign up
+                    .col-md-4.wow.animated.fadeInUp(data-wow-delay='0.4s')
+                        .price-table.featured.text-center
+                            span Gold
+                            .value
+                                span $
+                                span 50,00
+                                br
+                                span month
+                            ul
+                                li Free Trial
+                                li Free Trial
+                                li Free Trial
+                                li Free Trial
+                                li
+                                    a(href='#') sign up
+                    .col-md-4.wow.animated.fadeInUp(data-wow-delay='0.8s')
+                        .price-table.text-center
+                            span Diamond
+                            .value
+                                span $
+                                span 123,12
+                                br
+                                span month
+                            ul
+                                li All Bonus Points
+                                li All Bonus Points
+                                li All Bonus Points
+                                li All Bonus Points
+                                li
+                                    a(href='#') sign up
+        // end Price section
+        // Social section
+        section#social.parallax
+            .overlay
+                .container
+                    .row
+                        .sec-title.text-center.white.wow.animated.fadeInDown
+                            h2 FOLLOW US
+                            p Beautifully simple follow buttons to help you get followers on
+                        ul.social-button
+                            li.wow.animated.zoomIn
+                                a(href='#')
+                                    i.fa.fa-thumbs-up.fa-2x
+                            li.wow.animated.zoomIn(data-wow-delay='0.3s')
+                                a(href='#')
+                                    i.fa.fa-twitter.fa-2x
+                            li.wow.animated.zoomIn(data-wow-delay='0.6s')
+                                a(href='#')
+                                    i.fa.fa-dribbble.fa-2x
+        // end Social section
+        // Contact section
+        section#contact
+            .container
+                .row
+                    .sec-title.text-center.wow.animated.fadeInDown
+                        h2 Contact
+                        p Leave a Message
+                    .col-md-7.contact-form.wow.animated.fadeInLeft
+                        form(action='#', method='post')
+                            .input-field
+                                input.form-control(type='text', name='name', placeholder='Your Name...')
+                            .input-field
+                                input.form-control(type='email', name='email', placeholder='Your Email...')
+                            .input-field
+                                input.form-control(type='text', name='subject', placeholder='Subject...')
+                            .input-field
+                                textarea.form-control(name='message', placeholder='Messages...')
+                            button#submit.btn.btn-blue.btn-effect(type='submit') Send
+                    .col-md-5.wow.animated.fadeInRight
+                        address.contact-details
+                            h3 Contact Us
+                            p
+                                i.fa.fa-pencil
+                                | Phoenix Inc.
+                                span PO Box 345678
+                                span Little Lonsdale St, Melbourne
+                                span Australia
+                            br
+                            p
+                                i.fa.fa-phone
+                                | Phone: (415) 124-5678
+                            p
+                                i.fa.fa-envelope
+                                | website@yourname.com
+        // end Contact section
+    footer#footer
+        .container
+            .row.text-center
+                .footer-content
+                    .wow.animated.fadeInDown
+                        p newsletter signup
+                        p Get Cool Stuff! We hate spam!
+                    form.subscribe-form.wow.animated.fadeInUp(action='#', method='post')
+                        .input-field
+                            input.subscribe.form-control(type='email', placeholder='Enter Your Email...')
+                            button.submit-icon(type='submit')
+                                i.fa.fa-paper-plane.fa-lg
+                    .footer-social
+                        ul
+                            li.wow.animated.zoomIn
+                                a(href='#')
+                                    i.fa.fa-thumbs-up.fa-3x
+                            li.wow.animated.zoomIn(data-wow-delay='0.3s')
+                                a(href='#')
+                                    i.fa.fa-twitter.fa-3x
+                            li.wow.animated.zoomIn(data-wow-delay='0.6s')
+                                a(href='#')
+                                    i.fa.fa-skype.fa-3x
+                            li.wow.animated.zoomIn(data-wow-delay='0.9s')
+                                a(href='#')
+                                    i.fa.fa-dribbble.fa-3x
+                            li.wow.animated.zoomIn(data-wow-delay='1.2s')
+                                a(href='#')
+                                    i.fa.fa-youtube.fa-3x
+                    p
+                        | Copyright © 2014-2015 Design and Developed By
+                        a(href='http://www.themefisher.com') Themefisher
