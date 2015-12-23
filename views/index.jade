@@ -1,5 +1,18 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    #body
+        #preloader
+            .loder-box
+                .battery
+
+        #navigation.navbar-inverse.navbar-fixed-top.animated-header
+            .container
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                        span.sr-only "Toggle navigation"
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+
+                    h1.navbar-brand

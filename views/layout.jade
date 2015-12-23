@@ -1,7 +1,42 @@
 doctype html
-html
+html(lang='ru')
   head
+    meta(charset='utf-8')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='Blue One Page Creative HTML5 Template')
+    meta(name='keywords', content='one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation')
+    meta(name='author', content='Muhammad Morshed')
+    // Bootstrap core JavaScript
+    script(src='/js/modernizr-2.6.2.min.js')
+    script(src='/js/jquery-1.11.1.min.js')
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/jquery.singlePageNav.min.js')
+    script(src='/js/jquery.fancybox.pack.js')
+    script(src='http://maps.google.com/maps/api/js?sensor=false')
+    script(src='/js/owl.carousel.min.js')
+    script(src='/js/jquery.easing.min.js')
+    script(src='/js/jquery.slitslider.js')
+    script(src='/js/jquery.ba-cond.min.js')
+    script(src='/js/wow.min.js')
+    script(src='/js/main.js')
+    block scripts
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700',rel='stylesheet',type='text/css')
+    link(rel='stylesheet', href='/css/font-awesome.min.css')
+    link(rel='stylesheet', href='/css/jquery.fancybox.css')
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/css/owl.carousel.css')
+    link(rel='stylesheet', href='/css/slit-slider.css')
+    link(rel='stylesheet', href='/css/animate.css')
+    link(rel='stylesheet', href='/css/main.css')
+    block styles
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    block content
+    // Begin page content
+    .container#content
+      div(class="col-md-12")
+        block content
+    .footer
+      .container
+        div(class="col-md-12")
+          p.text-muted fkn_4pi_final
