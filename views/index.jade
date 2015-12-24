@@ -35,9 +35,7 @@ block content
                     li
                         a(href='#testimonials') Testimonial
                     li
-                        a(href='#price') price
-                    li
-                        a(href='#contact') Contact
+                        a(href='#contact') оставить заявку
             // /main nav
     //
       End Fixed Navigation
@@ -53,8 +51,10 @@ block content
                         .bg-img.bg-img-1
                         .slide-caption
                             .caption-content
-                                h2.animated.fadeInDown BLUE Onepage HTML5 Template
-                                span.animated.fadeInDown Clean and Professional one page Template
+                                h2.animated.fadeInDown эксперт недвижемость
+                                span.animated.fadeInDown Продажа    Покупка    Обмен    Аренда
+                                span.animated.fadeInDown Приватизация    Услуги адвоката    Займ до продажи
+                                span.animated.fadeInDown Ипотека    сертификаты и т.д.
                                 a.btn.btn-blue.btn-effect(href='#') Join US
                     .sl-slide(data-orientation='vertical', data-slice1-rotation='10', data-slice2-rotation='-15', data-slice1-scale='1.5', data-slice2-scale='1.5')
                         .bg-img.bg-img-2
@@ -184,7 +184,7 @@ block content
                                 p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
                             ul.external
                                 li
-                                    a.fancybox(title='Wall street', href='img/slider/banner.jpg', data-fancybox-group='works')
+                                    a.fancybox(title='Wall street', href='img/slider/two.jpg', data-fancybox-group='works')
                                         i.fa.fa-search
                                 li
                                     a(href='')
@@ -266,57 +266,7 @@ block content
                                         | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         // end Testimonial section
         // Price section
-        section#price
-            .container
-                .row
-                    .sec-title.text-center.wow.animated.fadeInDown
-                        h2 Price
-                        p Our price for your company
-                    .col-md-4.wow.animated.fadeInUp
-                        .price-table.text-center
-                            span Silver
-                            .value
-                                span $
-                                span 24,35
-                                br
-                                span month
-                            ul
-                                li No Bonus Points
-                                li No Bonus Points
-                                li No Bonus Points
-                                li No Bonus Points
-                                li
-                                    a(href='#') sign up
-                    .col-md-4.wow.animated.fadeInUp(data-wow-delay='0.4s')
-                        .price-table.featured.text-center
-                            span Gold
-                            .value
-                                span $
-                                span 50,00
-                                br
-                                span month
-                            ul
-                                li Free Trial
-                                li Free Trial
-                                li Free Trial
-                                li Free Trial
-                                li
-                                    a(href='#') sign up
-                    .col-md-4.wow.animated.fadeInUp(data-wow-delay='0.8s')
-                        .price-table.text-center
-                            span Diamond
-                            .value
-                                span $
-                                span 123,12
-                                br
-                                span month
-                            ul
-                                li All Bonus Points
-                                li All Bonus Points
-                                li All Bonus Points
-                                li All Bonus Points
-                                li
-                                    a(href='#') sign up
+        // делитнул
         // end Price section
         // Social section
         section#social.parallax
@@ -342,37 +292,61 @@ block content
             .container
                 .row
                     .sec-title.text-center.wow.animated.fadeInDown
-                        h2 Contact
-                        p Leave a Message
+                        h2 Оставить заявку
                     .col-md-7.contact-form.wow.animated.fadeInLeft
                         form(action='#', method='post')
+                            .radio-inline
+                                label
+                                    input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+                                    | Сдать
+                            .radio-inline
+                                label
+                                    input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
+                                    | Купить
                             .input-field
-                                input.form-control(type='text', name='name', placeholder='Your Name...')
+                                select#type.form-control(placeholder='Ваше имя...')
+                                    option Ленинский
+                                    option Свердловский
+                                    option Октярьский
                             .input-field
-                                input.form-control(type='email', name='email', placeholder='Your Email...')
+                                input.form-control(type='text', name='name', placeholder='Ваше имя...')
                             .input-field
-                                input.form-control(type='text', name='subject', placeholder='Subject...')
+                                input.form-control(type='email', name='email', placeholder='Ваш Email...')
                             .input-field
-                                textarea.form-control(name='message', placeholder='Messages...')
-                            button#submit.btn.btn-blue.btn-effect(type='submit') Send
+                                input.form-control(type='text', name='phone', placeholder='Ваш телефон...')
+                            .input-field
+                                select#type.form-control(placeholder='Тип Объекта...')
+                                    option Квартира
+                                    option Дом
+                                    option Коттедж
+                            .input-field
+                                select#type.form-control(placeholder='Колличество комнат...')
+                                    option 1
+                                    option 2
+                                    option 3
+                                    option 4
+                                    option 5
+                                    option 5+
+                            .input-field
+                                input.form-control(type='text', name='cost', placeholder='Цена...')
+                            .input-field
+                                textarea.form-control(name='message', placeholder='Комментарий...')
+                            button#submit.btn.btn-blue.btn-effect(type='submit') Отправить
                     .col-md-5.wow.animated.fadeInRight
                         address.contact-details
-                            h3 Contact Us
+                            h3 Контакты
                             p
                                 i.fa.fa-pencil
-                                | Phoenix Inc.
-                                span PO Box 345678
-                                span Little Lonsdale St, Melbourne
-                                span Australia
+                                | Адрес нашего офиса
                             br
                             p
                                 i.fa.fa-phone
-                                | Phone: (415) 124-5678
+                                | Телефон: 733-712
                             p
                                 i.fa.fa-envelope
                                 | website@yourname.com
         // end Contact section
-    
+
     footer#footer
         .container
             .row.text-center

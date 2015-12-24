@@ -155,13 +155,13 @@
 }
 
 .bg-img-1 {
-	background-image: url(../img/slider/banner.jpg);
+	background-image: url(../img/slider/two.jpg);
 }
 .bg-img-2 {
-	background-image: url(../img/slider/affinity.jpeg);
+	background-image: url(../img/slider/one.jpg);
 }
 .bg-img-3 {
-	background-image: url(../img/slider/cinelli.jpeg);
+	background-image: url(../img/slider/three.jpg);
 }
 
 
@@ -190,7 +190,7 @@
 	-ms-animation: fadeOut 1s ease-in-out both;
 	animation: fadeOut 1s ease-in-out both;
 }
-.sl-trans-back-elems .caption-content span,,
+.sl-trans-back-elems .caption-content span,
 .sl-trans-back-elems .caption-content a {
 	-webkit-animation: fadeOut 1s linear both;
 	-moz-animation: fadeOut 1s linear both;
