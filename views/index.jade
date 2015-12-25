@@ -20,23 +20,23 @@ block content
                     span.icon-bar
                 // /responsive nav button
                 // logo
-                img(src='img/logo.png', height='70')
+                img(src='img/logo2.png', height='70')
                 // /logo
             // main nav
             nav.collapse.navbar-collapse.navbar-right(role='navigation')
                 ul#nav.nav.navbar-nav
                     li
-                        a(href='#body') Home
+                        a(href='#body') главная
                     li
-                        a(href='#service') Service
+                        a(href='#service') услуги
                     li
-                        a(href='#portfolio') portfolio
+                        a(href='#portfolio') каталог
                     li
                         a(href='#testimonials') Testimonial
                     li
                         a(href='#contact') оставить заявку
             // /main nav
-    //
+    //68221d dfb02a
       End Fixed Navigation
       ====================================
     main.site-content(role='main')
@@ -50,25 +50,23 @@ block content
                         .bg-img.bg-img-1
                         .slide-caption
                             .caption-content
-                                h2.animated.fadeInDown эксперт недвижемость
-                                span.animated.fadeInDown Продажа    Покупка    Обмен    Аренда
-                                span.animated.fadeInDown Приватизация    Услуги адвоката    Займ до продажи
-                                span.animated.fadeInDown Ипотека    сертификаты и т.д.
-                                a.btn.btn-blue.btn-effect(href='#') Join US
+                                h2.animated.fadeInDown Покупка квартиры
+                                span.animated.fadeInDown Наши специалисты помогут Вам в вопросе покупки квартиры
+                                a.btn.btn-blue.btn-effect(href='#')  Подробнее
                     .sl-slide(data-orientation='vertical', data-slice1-rotation='10', data-slice2-rotation='-15', data-slice1-scale='1.5', data-slice2-scale='1.5')
                         .bg-img.bg-img-2
                         .slide-caption
                             .caption-content
-                                h2 BLUE Onepage HTML5 Template
-                                span Clean and Professional one page Template
-                                a.btn.btn-blue.btn-effect(href='#') Join US
+                                h2 Аренда недвижимости
+                                span Широкий выбор нежелых помещений различного рода
+                                a.btn.btn-blue.btn-effect(href='#') Просмотреть
                     .sl-slide(data-orientation='horizontal', data-slice1-rotation='3', data-slice2-rotation='3', data-slice1-scale='2', data-slice2-scale='1')
                         .bg-img.bg-img-3
                         .slide-caption
                             .caption-content
-                                h2 BLUE Onepage HTML5 Template
-                                span Clean and Professional one page Template
-                                a.btn.btn-blue.btn-effect(href='#') Join US
+                                h2 Аренда загодного дома
+                                span Что-то про загородные дома
+                                a.btn.btn-blue.btn-effect(href='#') Сюда
                 // /sl-slider
                 //
                   <nav id="nav-arrows" class="nav-arrows">
@@ -128,7 +126,7 @@ block content
             .container
                 .row
                     .sec-title.text-center
-                        h2.wow.animated.bounceInLeft Service
+                        h2.wow.animated.bounceInLeft Услуги
                         p.wow.animated.bounceInRight The Key Features of our Job
                     .col-md-3.col-sm-6.col-xs-12.text-center.wow.animated.zoomIn
                         .service-item
@@ -160,9 +158,9 @@ block content
             .container
                 .row
                     .sec-title.text-center.wow.animated.fadeInDown
-                        h2 FEATURED PROJECTS
+                        h2 каталог
                         p
-                            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            | Здесь будет находиться несколько слов о каталоге. Тут же будет и поиск по каталогу.
                     ul.project-wrapper.wow.animated.fadeInUp
                         li.portfolio-item
                             img.img-responsive(src='img/portfolio/item.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat')
@@ -183,7 +181,7 @@ block content
                                 p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
                             ul.external
                                 li
-                                    a.fancybox(title='Wall street', href='img/slider/two.jpg', data-fancybox-group='works')
+                                    a.fancybox(title='Wall street', href='img/portfolio/item2.jpg', data-fancybox-group='works')
                                         i.fa.fa-search
                                 li
                                     a(href='')
@@ -236,6 +234,10 @@ block content
                                 li
                                     a(href='')
                                         i.fa.fa-link
+        section#mapblock
+            .container
+                .row
+                    #map(style='height:500px')
         // end portfolio section
         // Testimonial section
         section#testimonials.parallax
