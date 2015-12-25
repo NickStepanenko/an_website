@@ -242,8 +242,20 @@ block content
                                     .panel-heading
                                         .sec-title.text-center.wow.animated.fadeInDown
                                             h3
-                                                a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', style='color: #68221d')
+                                                a#accordionText(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', style='color: #68221d')
                                                     | Показать на карте
+
+                                                script.
+                                                    (function ($) {$(document).ready(function() {
+                                                        var linkText = $("accordionText").text();
+                                                        console.log("dnsjandjas" + linkText);
+                                                        $("#accordion").click(function() {
+                                                            if(linkText == "Показать на карте") {
+                                                                $("accordionText").text("Скрыть карту");
+                                                            }
+                                                        })
+                                                    });})(jQuery);
+
                                     #collapseOne.panel-collapse.collapse
                                         .panel-body
                                             #map(style='height:500px')
