@@ -127,7 +127,7 @@ block content
                 .row
                     .sec-title.text-center
                         h2.wow.animated.bounceInLeft Услуги
-                        p.wow.animated.bounceInRight Выбирите то что нужно Вам
+                        p.wow.animated.bounceInRight Выберите то что нужно Вам
                     .col-md-3.col-sm-6.col-xs-12.text-center.wow.animated.zoomIn
                         .service-item
                             .service-icon
@@ -241,8 +241,8 @@ block content
                                 .panel.panel-default
                                     .panel-heading
                                         .sec-title.text-center.wow.animated.fadeInDown
-                                            p
-                                                a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne')
+                                            h3
+                                                a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', style='color: #68221d')
                                                     | Показать на карте
                                     #collapseOne.panel-collapse.collapse
                                         .panel-body
@@ -341,7 +341,8 @@ block content
                                 input.form-control(type='text', name='cost', placeholder='Цена...')
                             .input-field
                                 textarea.form-control(name='message', placeholder='Комментарий...')
-                            button#submit.btn.btn-blue.btn-effect(type='submit') Отправить
+                            button#submit.btn.btn-blue.btn-effect(type='submit')
+                                span(style='color: #68221d') Отправить
                     .col-md-5.wow.animated.fadeInRight
                         address.contact-details
                             h3 Контакты
