@@ -30,7 +30,7 @@ block content
                     li
                         a(href='#service') услуги
                     li
-                        a(href='#portfolio') каталог
+                        a(href='#testimonials') каталог
                     li
                         a(href='#testimonials') о нас
                     li
@@ -165,13 +165,13 @@ block content
 
                                 script.
                                     (function ($) {$(document).ready(function() {
-                                        var linkText = $("accordionText").text();
-                                        console.log("dnsjandjas" + linkText);
-                                        $("#accordion").click(function() {
-                                            if(linkText == "Показать на карте") {
-                                                $("accordionText").text("Скрыть карту");
+                                        $("#accordionText").click(function() {
+                                            if($("#accordionText").text() == "Показать на карте") {
+                                                $("#accordionText").text("Скрыть карту");
+                                            } else {
+                                                $("#accordionText").text("Показать на карте");
                                             }
-                                        })
+                                        });
                                     });})(jQuery);
 
                     #collapseOne.panel-collapse.collapse
