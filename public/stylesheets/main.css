@@ -644,9 +644,9 @@ h1.navbar-brand {
 
 figcaption.mask {
     background-color: rgba(104, 34, 29, 0.79);
-    bottom: -126px;
+    bottom: -60px;
     color: #fff;
-    padding: 25px;
+    padding: 14px;
     position: absolute;
     width: 100%;
     text-align: left;
@@ -753,15 +753,13 @@ ul.external li a:hover {
 .testimonial-item {
     margin: 0 auto;
     padding-bottom: 50px;
-    width: 64%;
+    width: 90%;
 }
 
 .testimonial-item img {
-    border: 3px solid #fff;
-    border-radius: 50%;
     display: inline-block;
     height: auto;
-    max-width: 100px;
+    max-width: 380px;
 }
 
 .testimonial-item > div {

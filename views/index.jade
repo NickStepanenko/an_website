@@ -154,138 +154,336 @@ block content
                             p можно обойтись и без этого текста
         // end Service section
         // portfolio section
-        section#portfolio
-            .container
-                .row
-                    .sec-title.text-center.wow.animated.fadeInDown
-                        h2 каталог
-                        p
-                            | Здесь будет находиться несколько слов о каталоге. Тут же будет и поиск по каталогу.
-                    ul.project-wrapper.wow.animated.fadeInUp
-                        li.portfolio-item
-                            img.img-responsive(src='img/portfolio/item.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat')
-                            figcaption.mask
-                                h3 Wall street
-                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
-                            ul.external
-                                li
-                                    a.fancybox(title='Araund The world', data-fancybox-group='works', href='img/portfolio/item.jpg')
-                                        i.fa.fa-search
-                                li
-                                    a(href='')
-                                        i.fa.fa-link
-                        li.portfolio-item
-                            img.img-responsive(src='img/portfolio/item2.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
-                            figcaption.mask
-                                h3 Wall street
-                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
-                            ul.external
-                                li
-                                    a.fancybox(title='Wall street', href='img/portfolio/item2.jpg', data-fancybox-group='works')
-                                        i.fa.fa-search
-                                li
-                                    a(href='')
-                                        i.fa.fa-link
-                        li.portfolio-item
-                            img.img-responsive(src='img/portfolio/item3.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
-                            figcaption.mask
-                                h3 Wall street
-                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
-                            ul.external
-                                li
-                                    a.fancybox(title='Behind The world', data-fancybox-group='works', href='img/portfolio/item3.jpg')
-                                        i.fa.fa-search
-                                li
-                                    a(href='')
-                                        i.fa.fa-link
-                        li.portfolio-item
-                            img.img-responsive(src='img/portfolio/item4.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.')
-                            figcaption.mask
-                                h3 Wall street
-                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
-                            ul.external
-                                li
-                                    a.fancybox(title='Wall street 4', data-fancybox-group='works', href='img/portfolio/item4.jpg')
-                                        i.fa.fa-search
-                                li
-                                    a(href='')
-                                        i.fa.fa-link
-                        li.portfolio-item
-                            img.img-responsive(src='img/portfolio/item5.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
-                            figcaption.mask
-                                h3 Wall street
-                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
-                            ul.external
-                                li
-                                    a.fancybox(title='Wall street 5', data-fancybox-group='works', href='img/portfolio/item5.jpg')
-                                        i.fa.fa-search
-                                li
-                                    a(href='')
-                                        i.fa.fa-link
-                        li.portfolio-item
-                            img.img-responsive(src='img/portfolio/item6.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
-                            figcaption.mask
-                                h3 Wall street
-                                p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
-                            ul.external
-                                li
-                                    a.fancybox(title='Wall street 6', data-fancybox-group='works', href='img/portfolio/item6.jpg')
-                                        i.fa.fa-search
-                                li
-                                    a(href='')
-                                        i.fa.fa-link
-                .row
-                    .sec-title.text-center.wow.animated.fadeInDown
-                        section#mapblock
-                            #accordion.panel-group
-                                .panel.panel-default
-                                    .panel-heading
-                                        .sec-title.text-center.wow.animated.fadeInDown
-                                            h3
-                                                a#accordionText(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', style='color: #68221d')
-                                                    | Показать на карте
+        section#mapblock
+            #accordion.panel-group
+                .panel.panel-default
+                    .panel-heading
+                        .sec-title.text-center.wow.animated.fadeInDown
+                            h3
+                                a#accordionText(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', style='color: #68221d')
+                                    | Показать на карте
 
-                                                script.
-                                                    (function ($) {$(document).ready(function() {
-                                                        var linkText = $("accordionText").text();
-                                                        console.log("dnsjandjas" + linkText);
-                                                        $("#accordion").click(function() {
-                                                            if(linkText == "Показать на карте") {
-                                                                $("accordionText").text("Скрыть карту");
-                                                            }
-                                                        })
-                                                    });})(jQuery);
+                                script.
+                                    (function ($) {$(document).ready(function() {
+                                        var linkText = $("accordionText").text();
+                                        console.log("dnsjandjas" + linkText);
+                                        $("#accordion").click(function() {
+                                            if(linkText == "Показать на карте") {
+                                                $("accordionText").text("Скрыть карту");
+                                            }
+                                        })
+                                    });})(jQuery);
 
-                                    #collapseOne.panel-collapse.collapse
-                                        .panel-body
-                                            #map(style='height:500px')
+                    #collapseOne.panel-collapse.collapse
+                        .panel-body
+                            #map(style='height:500px')
         // end portfolio section
         // Testimonial section
         section#testimonials.parallax
             .overlay
                 .container
                     .row
-                        .sec-title.text-center.white.wow.animated.fadeInDown
-                            h2 Експерт недвижемость
+                        .sec-title.text-center.wow.animated.fadeInDown
+                            h2 каталог
+                            p
+                                | Здесь будет находиться несколько слов о каталоге. Тут же будет и поиск по каталогу.
                         #testimonial.wow.animated.fadeInUp
                             .testimonial-item.text-center
-                                img(src='img/member-1.jpg', alt='Our Clients')
-                                .clearfix
-                                    span Заголоаок
-                                    p
-                                        | Содержательный текст о том почему нужно воспользоваться услугами именно этого агества недвижемости Вставить текст Вставить текст Вставить текст Вставить текст Вставить текст Вставить текст Вставить текст Вставить текст Вставить текст Вставить текст Вставить текст Вставить текст
+                                ul.project-wrapper.wow.animated.fadeInUp
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Araund The world', data-fancybox-group='works', href='img/portfolio/item.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item2.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street', href='img/portfolio/item2.jpg', data-fancybox-group='works')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item3.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Behind The world', data-fancybox-group='works', href='img/portfolio/item3.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item4.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 4', data-fancybox-group='works', href='img/portfolio/item4.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item5.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 5', data-fancybox-group='works', href='img/portfolio/item5.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item6.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 6', data-fancybox-group='works', href='img/portfolio/item6.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
                             .testimonial-item.text-center
-                                img(src='img/member-1.jpg', alt='Our Clients')
-                                .clearfix
-                                    span Заголовок
-                                    p
-                                        |  Еще боле.Вставить текст Вставить текст Вставить текст Вставить текст. Вставить текст Вставить текст Вставить текст Вставить текст.Вставить текст Вставить текст Вставить текст Вставить текст. Вставить текст Вставить текст Вставить текст Вставить текст.Вставить текст Вставить текст Вставить текст Вставить текст. Вставить текст Вставить текст Вставить текст Вставить текст.Вставить текст Вставить текст Вставить текст Вставить текст. Вставить текст Вставить текст Вставить текст Вставить текст.
+                                ul.project-wrapper.wow.animated.fadeInUp
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Araund The world', data-fancybox-group='works', href='img/portfolio/item.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item2.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street', href='img/portfolio/item2.jpg', data-fancybox-group='works')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item3.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Behind The world', data-fancybox-group='works', href='img/portfolio/item3.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item4.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 4', data-fancybox-group='works', href='img/portfolio/item4.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item5.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 5', data-fancybox-group='works', href='img/portfolio/item5.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item6.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 6', data-fancybox-group='works', href='img/portfolio/item6.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
                             .testimonial-item.text-center
-                                img(src='img/member-1.jpg', alt='Our Clients')
-                                .clearfix
-                                    span Katty Flower
-                                    p
-                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                ul.project-wrapper.wow.animated.fadeInUp
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Araund The world', data-fancybox-group='works', href='img/portfolio/item.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item2.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street', href='img/portfolio/item2.jpg', data-fancybox-group='works')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item3.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Behind The world', data-fancybox-group='works', href='img/portfolio/item3.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item4.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 4', data-fancybox-group='works', href='img/portfolio/item4.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item5.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 5', data-fancybox-group='works', href='img/portfolio/item5.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item6.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 6', data-fancybox-group='works', href='img/portfolio/item6.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                            .testimonial-item.text-center
+                                ul.project-wrapper.wow.animated.fadeInUp
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Araund The world', data-fancybox-group='works', href='img/portfolio/item.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item2.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street', href='img/portfolio/item2.jpg', data-fancybox-group='works')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item3.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Behind The world', data-fancybox-group='works', href='img/portfolio/item3.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item4.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 4', data-fancybox-group='works', href='img/portfolio/item4.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item5.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 5', data-fancybox-group='works', href='img/portfolio/item5.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
+                                    li.portfolio-item
+                                        img.img-responsive(src='img/portfolio/item6.jpg', alt='Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ')
+                                        figcaption.mask
+                                            h3 Wall street
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.
+                                        ul.external
+                                            li
+                                                a.fancybox(title='Wall street 6', data-fancybox-group='works', href='img/portfolio/item6.jpg')
+                                                    i.fa.fa-search
+                                            li
+                                                a(href='')
+                                                    i.fa.fa-link
         // end Testimonial section
         // Price section
         // делитнул
