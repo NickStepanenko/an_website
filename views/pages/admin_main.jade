@@ -1,39 +1,34 @@
-//
-   Created by Nick on 26.12.2015.
+extends layout_admin
 
-doctype html
-html(lang='ru')
-   head
-      meta(charset='utf-8')
-      meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
-      meta(name='viewport', content='width=device-width, initial-scale=1')
-      meta(name='description', content='Blue One Page Creative HTML5 Template')
-      meta(name='keywords', content='one page, single page, onepage, responsive, parallax, creative, business, html5, css3, css3 animation')
-      meta(name='author', content='Muhammad Morshed')
-      block scripts
-         script(src='/javascripts/jquery-1.11.1.min.js')
-         script(src='/javascripts/bootstrap.min.js')
-         script(src='/javascripts/jquery.singlePageNav.min.js')
-         script(src='/javascripts/jquery.fancybox.pack.js')
-         script(src='/javascripts/jquery.easing.min.js')
-         script(src='/javascripts/jquery.slitslider.js')
-         script(src='/javascripts/jquery.ba-cond.min.js')
-      block styles
-         link(href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700',rel='stylesheet',type='text/css')
-         link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
-         link(rel='stylesheet', href='/stylesheets/jquery.fancybox.css')
-         link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-         link(rel='stylesheet', href='/stylesheets/owl.carousel.css')
-         link(rel='stylesheet', href='/stylesheets/slit-slider.css')
-         link(rel='stylesheet', href='/stylesheets/animate.css')
-         link(rel='stylesheet', href='/stylesheets/main.css')
-      title= title
-   body#body
-       ul.nav.nav-pills.nav-stacked
-       li.active
-           a(href='#') Главная
-       li
-           a(href='#') Профиль
-       li
-           a(href='#') Сообщение
-      block content
+block content
+    .tab-content.col-sm-6
+        #home.tab-pane.fade.in.active
+            h3 Каталог
+            p
+                | Небольшое описание, если нужно
+            table.table.table-bordered
+                thead
+                    tr
+                        th id
+                        th Дата добавления
+                        th Тип
+                        th Стоимость
+                        th Адрес
+                        th Действия
+                tbody
+                    tr
+                        td 1488
+                        td 01.01.2007
+                        td Аренда
+                        td 10000
+                        td у. Колотушкина 88
+                        td
+                            button.btn.btn-default.btn-lg(type='button')
+                                a(href='#')
+                                    i.fa.fa-eye
+                            button.btn.btn-default.btn-lg(type='button')
+                                a(href='#')
+                                    i.fa.fa-pencil
+                            button.btn.btn-default.btn-lg(type='button')
+                                a(href='#')
+                                    i.fa.fa-remove

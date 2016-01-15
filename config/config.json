@@ -1,0 +1,12 @@
+{
+  "development": {
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "expert_admin",
+    "password": "expert",
+    "database": "catalogue",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}

@@ -640,6 +640,8 @@ h1.navbar-brand {
     overflow: hidden;
     position: relative;
     width: 32%;
+
+    display:inline-block;
 }
 
 figcaption.mask {
@@ -758,7 +760,7 @@ ul.external li a:hover {
 
 .testimonial-item img {
     display: inline-block;
-    height: auto;
+    height: 320px;
     max-width: 380px;
 }
 
@@ -1154,7 +1156,7 @@ textarea.form-control {
 
 /* portfolio */
     figcaption.mask {
-        bottom: -151px;
+        bottom: -60px;
     }
 
     .testimonial-item > div:after {
@@ -1307,7 +1309,7 @@ textarea.form-control {
     }
 
     figcaption.mask {
-        bottom: -107px;
+        bottom: -60px;
         color: #fff;
         padding: 15px;
     }
@@ -1409,7 +1411,7 @@ textarea.form-control {
     }
 
     figcaption.mask {
-        bottom: -132px;
+        bottom: -60px;
     }
 
 /* testimonial */
