@@ -1,6 +1,5 @@
 doctype html
-//
-  Created by Nick on 26.12.2015.
+
 html(lang='ru')
     head
         meta(charset='utf-8')
@@ -24,28 +23,28 @@ html(lang='ru')
         link(rel='stylesheet', href='/stylesheets/slit-slider.css')
         link(rel='stylesheet', href='/stylesheets/animate.css')
         link(rel='stylesheet', href='/stylesheets/main.css')
-        link(href='http://hayageek.github.io/jQuery-Upload-File/4.0.8/uploadfile.css', rel='stylesheet')
+        link(rel='stylesheet', href='/stylesheets/uploadfile.css')
         script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
         script(src='http://hayageek.github.io/jQuery-Upload-File/4.0.8/jquery.uploadfile.min.js')
         title
-   body#body
-      .container
-      h1.col-sm-offset-3 Система управления сайтом
-      ul.nav.nav-tabs.nav-stacked.nav-pills.col-sm-offset-1.col-sm-2
-         li.active
-             a(data-toggle='tab',href='#home',aria-controls="home",role="tab") Каталог
-         li
-             a(data-toggle='tab',href='#menu1',aria-controls="menu1",role="tab") Слайдер
-         li
-             a(data-toggle='tab',href='#menu2',aria-controls="menu2",role="tab") Menu 2
-      block content
-
-      #menu1.tab-pane.fade
-         h3 Слайдер
-         p
-            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      #menu2.tab-pane.fade
-         h3 Другое
-         p
-            | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-
+body#body
+    .container
+        h1.col-sm-offset-3 Система управления сайтом
+        ul.nav.nav-pills
+            li.active
+                a(data-toggle='tab',href='#home',aria-controls="home",role="tab") Каталог
+            li
+                a(data-toggle='tab',href='#menu1',aria-controls="menu1",role="tab") Слайдер
+            li
+                a(data-toggle='tab',href='#menu2',aria-controls="menu2",role="tab") Menu 2
+        .tab-content
+            #home.tab-pane.fade.in.active
+                block content
+            #menu1.tab-pane.fade
+                h3 Слайдер
+                p
+                    | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            #menu2.tab-pane.fade
+                h3 Другое
+                p
+                    | Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.

@@ -1,112 +1,103 @@
 extends layout_admin
-
 block content
-   #accordion.panel-group
-      .panel.panel-default
-         .panel-heading
-            a#accordionText(data-toggle='collapse', data-parent='#accordion', href='#collapseOne') Добавить
-         #collapseOne.panel-collapse.collapse
-            .panel-body
-               form.form-horizontal(role='form')
-                  .form-group
-                     label.col-sm-2.control-label(for='name') Тип объявления
-                     .col-sm-offset-2.col-sm-8
+    h3 Добавление
+    .tab-content.col-sm-12
+        .panel-body
+            form.form-horizontal(role='form', method='post', action='/admin_create')
+                .form-group
+                    label.col-sm-2.control-label Тип объявления
+                    .col-sm-8
                         label.radio-inline
-                           input#tradeTypeCheckbox1(type='radio', name='optionsRadios', value='option1')
-                           | Продажа
+                            input(type='radio', name='tradeType', value='Продажа', checked)
+                            | Продажа
                         label.radio-inline
-                           input#tradeTypeCheckbox2(type='radio', name='optionsRadios', value='option2')
-                           | Аренда
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Тип помещения
-                     .col-sm-8
-                        select#areaType.form-control
-                           option Комната
-                           option Хрущевка
-                           option Сталинка
-                           option Доля
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Количество комнат
-                     .col-sm-8
-                        input#numOfRooms.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Район
-                     .col-sm-8
-                        select#nameOfDistrict.form-control
-                           option Ленинский
-                           option Кировский
-                           option Свердловский
-                           option Октябрьский
-                           option Правобережный
-                           option Пригород
-                  .form-group
-                     label.col-sm-2.control-label(for='name') Улица
-                     .col-sm-8
-                        input#nameOfStreet.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Номер дома
-                     .col-sm-8
-                        input#buildingNum.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='name') Этаж
-                     .col-sm-8
-                        input#numOfFloor.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Число этажей в здании
-                     .col-sm-8
-                        input#totalFloorsInBuilding.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='name') Площадь
-                     .col-sm-8
-                        input#area.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Цена
-                     .col-sm-8
-                        input#price.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='name') Цена за кв. метр
-                     .col-sm-8
-                        input#oneSquareMeterPrice.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Год
-                     .col-sm-8
-                        input#year.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='name') Помещение
-                     .col-sm-8
-                        input#roomType.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Благоустроенность
-                     .col-sm-8
-                        input#livability.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='name') Описание
-                     .col-sm-8
-                        textarea#description.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Телефоны
-                     .col-sm-8
-                        input#contactPhones.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='name') Дата проверки
-                     .col-sm-8
-                        input#checkDate.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='type') Комментарий
-                     .col-sm-8
-                        textarea#commentToItem.form-control(type='text')
-                  .form-group
-                     label.col-sm-2.control-label(for='name') Файлы
-                     .col-sm-8
-                        #fileuploader Upload
+                            input(type='radio', name='tradeType', value='Аренда')
+                            | Аренда
+                .form-group
+                    label.col-sm-2.control-label Тип помещения
+                    .col-sm-4
+                        select.form-control(name="areaType", id="areaType")
+                            option Комната
+                            option Хрущевка
+                            option Сталинка
+                            option Доля
+                    label.col-sm-2.control-label Количество комнат
+                    .col-sm-4
+                        input.form-control(type='text', name="numOfRooms", id="numOfRooms")
+                .form-group
+                    label.col-sm-2.control-label Район
+                    .col-sm-4
+                        select.form-control(name="nameOfDistrict", id="nameOfDistrict")
+                            option Ленинский
+                            option Кировский
+                            option Свердловский
+                            option Октябрьский
+                            option Правобережный
+                            option Пригород
+                    label.col-sm-2.control-label Улица
+                    .col-sm-4
+                        input.form-control(type='text', name="nameOfStreet", id="nameOfStreet")
+                .form-group
+                    label.col-sm-2.control-label Номер дома
+                    .col-sm-4
+                        input.form-control(type='text', name="buildingNum", id="buildingNum")
+                    label.col-sm-2.control-label Этаж / Число этажей
+                    .col-sm-2
+                        input.form-control(type='text', name="numOfFloor", id="numOfFloor")
+                    .col-sm-2
+                        input.form-control(type='text', name="totalFloorsInBuilding", id="totalFloorsInBuilding")
+                .form-group
+                    label.col-sm-2.control-label Площадь
+                    .col-sm-4
+                        input.form-control(type='text', name="area", id="area")
+                    label.col-sm-2.control-label Год
+                    .col-sm-4
+                        input.form-control(type='text', name="year", id="year")
+                .form-group
+                    label.col-sm-2.control-label Цена
+                    .col-sm-4
+                        input.form-control(type='text', name="price", id="price")
+                    label.col-sm-2.control-label Цена за кв. метр
+                    .col-sm-4
+                        input.form-control(type='text', name="oneSquareMeterPrice", id="oneSquareMeterPrice")
+                            .form-group
+                label.col-sm-2.control-label Помещение
+                .col-sm-4
+                    input.form-control(type='text', name="roomType", id="roomType")
+                label.col-sm-2.control-label Благоустроенность
+                .col-sm-4
+                    input.form-control(type='text', name="livability", id="livability")
+                .form-group
+                    label.col-sm-2.control-label Описание
+                    .col-sm-4
+                        textarea.form-control(type='text', name="description", id="description")
+                    label.col-sm-2.control-label Комментарий
+                    .col-sm-4
+                        textarea.form-control(type='text', name="commentToItem", id="commentToItem")
+                .form-group
+                    label.col-sm-2.control-label Телефоны
+                    .col-sm-10
+                        input.form-control(type='text', name="contactPhones", id="contactPhones")
+                .form-group
+                    label.col-sm-2.control-label(for='name') Дата проверки
+                    .col-sm-1
+                        input#checkDate.form-control(type='text', placeholder='ДД')
+                    .col-sm-1
+                        input#checkDate.form-control(type='text', placeholder='ММ')
+                    .col-sm-2
+                        input#checkDate.form-control(type='text', placeholder='ГГГГ')
+                    label.col-sm-2.control-label(for='name') Файлы
+                    .col-sm-4
+                        #fileuploader.form-control Upload
                         script.
-                           $(document).ready(function () {
-                                      $("#fileuploader").uploadFile({
-                                         url: "YOUR_FILE_UPLOAD_URL",
-                                         fileName: "myfile"
-                                      });
-                                   }
-                           );
-                  .form-group
-                     .col-sm-offset-8.col-sm-8
-                        button.btn.btn-default(type="submit",id="save",class="btn btn-default") Сохранить
+                            $(document).ready(function () {
+                                        $("#fileuploader").uploadFile({
+                                            url: "YOUR_FILE_UPLOAD_URL",
+                                            fileName: "myfile"
+                                        });
+                                    }
+                            );
+                .form-group
+                    .col-sm-offset-10.col-sm-2
+                        button.btn.btn-default(type="submit",id="save") Добавить
+                                                               

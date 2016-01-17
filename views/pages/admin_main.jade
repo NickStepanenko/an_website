@@ -1,34 +1,38 @@
 extends layout_admin
 
 block content
-    .tab-content.col-sm-6
-        #home.tab-pane.fade.in.active
-            h3 Каталог
-            p
-                | Небольшое описание, если нужно
-            table.table.table-bordered
-                thead
-                    tr
-                        th id
-                        th Дата добавления
-                        th Тип
-                        th Стоимость
-                        th Адрес
-                        th Действия
-                tbody
-                    tr
-                        td 1488
-                        td 01.01.2007
-                        td Аренда
-                        td 10000
-                        td у. Колотушкина 88
-                        td
-                            button.btn.btn-default.btn-lg(type='button')
-                                a(href='#')
-                                    i.fa.fa-eye
-                            button.btn.btn-default.btn-lg(type='button')
-                                a(href='#')
-                                    i.fa.fa-pencil
-                            button.btn.btn-default.btn-lg(type='button')
-                                a(href='#')
-                                    i.fa.fa-remove
+    h3 Каталог
+    p
+        | Небольшое описание, если нужно
+    table.table.table-bordered
+        thead
+            tr
+                th id
+                th Дата добавления
+                th Тип
+                th Стоимость
+                th Адрес
+                th Действия
+        tbody
+        - for(var x = 0; x <catalogue.length; x++)
+            tr
+                td
+                    #{x + 1}
+                td
+                    #{catalogue[x].createdAt.toISOString().replace(/T/, ' ').replace(/\..+/, '')}
+                td
+                    #{catalogue[x].tradeType}
+                td
+                    #{catalogue[x].price}
+                td
+                    #{catalogue[x].nameOfStreet + ", " + catalogue[x].buildingNum}
+                td
+                    button.btn.btn-default.btn-lg(type='button')
+                        a(href='#')
+                            i.fa.fa-eye
+                    button.btn.btn-default.btn-lg(type='button')
+                        a(href='#')
+                            i.fa.fa-pencil
+                    button.btn.btn-default.btn-lg(type='button')
+                        a(href='#')
+                            i.fa.fa-remove
