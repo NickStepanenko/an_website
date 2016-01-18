@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 /* GET home page. */
 router.get('/admin', function(req, res, next) {
     db.Catalogue.findAll().success(function(Catalogue) {
-        res.render('pages/admin_main',{ catalogue: Catalogue, title: 'Admin main' });
+        res.render('pages/admin',{ catalogue: Catalogue, title: 'Admin main' });
     });
 });
 

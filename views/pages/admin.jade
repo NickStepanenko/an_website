@@ -17,15 +17,15 @@ block content
         - for(var x = 0; x <catalogue.length; x++)
             tr
                 td
-                    #{x + 1}
+                    tb #{catalogue[x].id}
                 td
-                    #{catalogue[x].createdAt.toISOString().replace(/T/, ' ').replace(/\..+/, '')}
+                    tb #{catalogue[x].createdAt.toISOString().replace(/T/, ' ').replace(/\..+/, '')}
                 td
-                    #{catalogue[x].tradeType}
+                    tb #{catalogue[x].tradeType}
                 td
-                    #{catalogue[x].price}
+                    tb #{catalogue[x].price}
                 td
-                    #{catalogue[x].nameOfStreet + ", " + catalogue[x].buildingNum}
+                    tb #{catalogue[x].nameOfStreet + ", " + catalogue[x].buildingNum}
                 td
                     button.btn.btn-default.btn-lg(type='button')
                         a(href='#')
